@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Users</h1>
+
+<%= turbo_stream_from "users"%>
+
+<turbo-frame id="users">
+  <% @users.each do |user| %>
+    <%= render user %>
+  <% end %>
+</turbo-frame>
+
+<%= link_to "New user", new_user_path %>

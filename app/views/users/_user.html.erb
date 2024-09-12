@@ -1,0 +1,22 @@
+
+<%= turbo_frame_tag user do %>
+<div id="<%= dom_id user %>" >
+  <p>
+    <strong>Name:</strong>
+    <%= user.name %>
+  </p>
+
+  <p>
+    <strong>Age:</strong>
+    <%= user.age %>
+  </p>
+
+  <p>
+    <strong>Mobile:</strong>
+    <%= user.mobile %>
+  </p>
+  <p>
+      <%= link_to "Show this user", user , data: { turbo: false } %>
+    </p>
+</div>
+<% end %>
