@@ -22,4 +22,17 @@
 <%= image_tag 'spinner.gif' %>
 <% end %>
 
+
+<%= button_to "Do something", example_path, method: :get, data: {turbo_stream: true} %>
+<div id="example"></div>
+
+<div class="todo"></div>
+<div class="todo"></div>
+<div class="todo"></div>
+<div class="todo"></div>
+<div class="todo"></div>
+<ul id="messages">
+</ul>
+
+
 <%= link_to "New user", new_user_path %>

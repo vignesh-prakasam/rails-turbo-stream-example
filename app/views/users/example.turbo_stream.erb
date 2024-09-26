@@ -1,0 +1,4 @@
+<%#= turbo_stream.append "example", plain: "Hello world" %>
+<%= turbo_stream_action_tag "console_log", targets: ".todo", message: "Hello world", template: "Content" %>
+<%= turbo_stream_action_tag "notification", title: "New Reservation Request for 9/26" %>
+<%= turbo_stream_action_tag "append", target: "messages", template: %(<li>Hello!</li>)%>

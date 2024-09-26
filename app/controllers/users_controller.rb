@@ -7,6 +7,13 @@ class UsersController < ApplicationController
     @lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   end
 
+  def example
+    respond_to do |format|
+      format.html
+      format.turbo_stream
+    end  
+  end
+  
   # GET /users or /users.json
   def index
     @users = User.all
