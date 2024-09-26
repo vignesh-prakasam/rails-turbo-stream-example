@@ -4,10 +4,22 @@
 
 <%= turbo_stream_from "users"%>
 
+
+<%= turbo_frame_tag "lorem0" do %>
+<%= image_tag 'spinner.gif' %>
+<% end %>
+
+
 <turbo-frame id="users">
   <% @users.each do |user| %>
     <%= render user %>
   <% end %>
 </turbo-frame>
+
+
+
+<%= turbo_frame_tag "lorem", src: lorempicsum_path do %>
+<%= image_tag 'spinner.gif' %>
+<% end %>
 
 <%= link_to "New user", new_user_path %>
